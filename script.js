@@ -1,17 +1,23 @@
-var dataP = d3.json("distanceDataJson.json")
-var mapP = d3.json("countries.geojson")
-var gdpDataP = d3.json("csvjson.json")
+//var dataP = d3.json("distanceDataJson.json")
+//var mapP = d3.json("countries.geojson")
+//var gdpDataP = d3.json("csvjson.json")
 
+var t = "hello world"
 
-Promise.all([dataP, mapP, gdpDataP]).then(function(values)
+Promise.all([t]).then(function(values)
 {
-  console.log("data", data)
+  var ti = values[0]
+
+  console.log("ti", ti)
 
 var title = d3.select("body")
-              .data(t)
-              .enter()
               .append("h1")
               .text(t)
               .attr("id", "title")
+
 }
-)
+,
+  function(err)
+{
+  console.log(err);
+});
