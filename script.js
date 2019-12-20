@@ -22,7 +22,6 @@ Promise.all([header]).then(function(values)
                .datum(d)
                .text(d)
                .attr("href", "www.google.com")
-               .on("mouseover", )
 
   }
 )
