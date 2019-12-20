@@ -2,18 +2,30 @@
 //var mapP = d3.json("countries.geojson")
 //var gdpDataP = d3.json("csvjson.json")
 
-var t = "hello world"
+var header = ['HOME', 'ABOUT ME', 'MY WORK', 'CONTACT', 'VIDEOS']
 
-Promise.all([t]).then(function(values)
+Promise.all([header]).then(function(values)
 {
-  var ti = values[0]
+  var head = values[0]
 
-  console.log("ti", ti)
+  console.log("head", head)
 
-var title = d3.select("body")
-              .append("h1")
-              .text(t)
-              .attr("id", "title")
+  body = d3.select('body')
+
+  headDiv = body.append("div")
+                .attr("id", "headDiv")
+
+  head.forEach(function(d,i)
+  {
+    return headDiv.append("a")
+               .attr("class", "headerText")
+               .datum(d)
+               .text(d)
+               .attr("href", "www.google.com")
+               .on("mouseover", )
+
+  }
+)
 
 }
 ,
