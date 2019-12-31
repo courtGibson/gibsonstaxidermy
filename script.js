@@ -15,7 +15,7 @@ Promise.all([header]).then(function(values)
   headDiv = body.append("div")
                 .attr("id", "headDiv")
 
-  head.forEach(function(d,i)
+ head.forEach(function(d,i)
   {
     return headDiv.append("a")
                .attr("class", "headerText")
